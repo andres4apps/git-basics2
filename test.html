@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test of Auto-fill</title>
+</head>
+<body>
+	<h3>Main Shift form<h3>
+	<hr>
+	
+	<div>
+		<label>Name: </label>
+		<input type="text" id="name">
+	</div>
+	<div>
+		<label>email: </label>
+		<input type="text" id="email">
+	</div>
+	<div>
+		<label>address: </label>
+		<input type="text" id="address">
+	</div>
+	<div>
+		<label>Cellphone: </label>
+		<input type="text" id="cell">
+	</div>
+	<div>
+		<label>Letters: </label>
+		<input type="text" id="letters">
+	</div>
+	<div>
+		<label>Are sure: </label>
+		<input type="radio" name="sure" value="Yes"> Yes
+		<input type="radio" name="sure" value="No"> No
+	</div>
+	<div>
+		<label>click to accept all terms</label>
+		<input type="checkbox" name="accept">
+	</div>
+	
+	<div>
+		<input type="submit" id="submit">
+	</div>
+</body>
+<script>
+$id("submit").addEventListener("click", function(){
+	alert('[submit] button was pressed');
+});
+
+$id("letters").addEventListener("keypress", function(e){
+	if(e.keyCode == 13) {
+		alert('presiono 13');
+		$id("submit").click();
+	}
+});
+
+function $id(element){
+	return document.getElementById(element);
+}
+
+</script>
+</html>

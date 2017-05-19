@@ -1,0 +1,25 @@
+{
+	"name" : "bad cat",
+	"description" : "Full fill required fields",
+	"version" : "1.0",
+	
+	"manifest_version" : 2,
+	
+	"browser_action" : {
+		"default_icon" : "icon.png",
+		"default_popup" : "popup.html"
+	},
+	
+	"content_scripts" : [
+		{
+			//"matches": ["file:///C:/Users/Andr%C3%A9s/Documents/Andres/Web%20Projects/bad%20cat/test.html"],
+			"matches": ["file:///C:/Users/Andr%C3%A9s/Documents/Andres/Web%20Projects/bad%20cat/test.html"],
+			"js": ["myscript.js"]
+		}
+	],
+	
+	"permissions" : [
+		"tabs", 
+		"storage"
+	]
+}
